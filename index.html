@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tutorial Platform</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/addon/hint/show-hint.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/addon/hint/html-hint.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            min-height: 200px;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f9;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+        /* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text color */
+    padding: 40px 0; /* Padding for top and bottom */
+    font-size: 14px; /* Font size for footer text */
+}
+
+footer h5 {
+    font-size: 18px; /* Font size for section headings */
+    margin-bottom: 20px; /* Space below headings */
+    color: #f8f9fa; /* Light text color for headings */
+}
+
+footer p, footer ul {
+    margin-bottom: 10px; /* Margin below paragraphs and lists */
+}
+
+footer a {
+    color: #adb5bd; /* Light gray color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    color: #f8f9fa; /* Light color when hovering over links */
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer .list-unstyled {
+    padding-left: 0; /* Remove padding from unordered lists */
+    list-style: none; /* Remove bullets from lists */
+}
+
+footer .text-center {
+    border-top: 1px solid #495057; /* Add a border at the top */
+    padding-top: 10px; /* Space above text */
+    margin-top: 20px; /* Space below the last section */
+    font-size: 13px; /* Slightly smaller text */
+}
+
+@media (max-width: 767.98px) {
+    footer .text-center {
+        text-align: center; /* Center text on small screens */
+    }
+    
+    footer .col-md-6, footer .col-md-3 {
+        margin-bottom: 20px; /* Space between columns on small screens */
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TutorialHub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="js.html">JavaScript</a></li>
+                <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+                <li class="nav-item"><a class="nav-link" href="#settings">Settings</a></li>
+            </ul>
+            <button class="btn btn-outline-success my-2 my-sm-0" id="loginBtn">Login</button>
+        </div>
+    </nav>
+
+    <main class="container mt-3">
+        <section id="html">
+            <h2>HTML Tutorial</h2>
+            <p>Learn the basics of HTML.</p>
+            <ul>
+                <li>Introduction to HTML</li>
+                <li>HTML Elements</li>
+                <li>HTML Attributes</li>
+                <li>HTML Forms</li>
+            </ul>
+        </section>
+
+        <section id="css">
+            <h2>CSS Tutorial</h2>
+            <p>Learn the basics of CSS.</p>
+            <ul>
+                <li>Introduction to CSS</li>
+                <li>CSS Selectors</li>
+                <li>CSS Box Model</li>
+                <li>CSS Flexbox</li>
+            </ul>
+        </section>
+
+        <section id="javascript">
+            <h2>JavaScript Tutorial</h2>
+            <p>Learn the basics of JavaScript.</p>
+            <ul>
+                <li>Introduction to JavaScript</li>
+                <li>JavaScript Variables</li>
+                <li>JavaScript Functions</li>
+                <li>DOM Manipulation</li>
+            </ul>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>Test your skills with interactive challenges.</p>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <p>Configure your preferences.</p>
+            <ul>
+                <li><input type="checkbox" id="darkModeToggle"> Enable Dark Mode</li>
+                <li><input type="checkbox" id="autoSuggestToggle"> Enable Auto Suggest</li>
+                <li><input type="checkbox" id="fontSizeToggle"> Increase Font Size</li>
+                <li><input type="checkbox" id="colorSchemeToggle"> Alternate Color Scheme</li>
+            </ul>
+        </section>
+
+        <section id="editor">
+            <h2>Live Code Editor</h2>
+            <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
+            <button class="btn btn-primary mt-2" onclick="runCode()">Run</button>
+            <iframe id="output" class="mt-2"></iframe>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About the Developer</h5>
+                    <p>This platform is developed by [Your Name]. I am a passionate web developer with experience in HTML, CSS, JavaScript, and various modern web technologies. I love creating interactive and user-friendly web applications.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:your.email@example.com" class="text-white">your.email@example.com</a></li>
+                        <li>Phone: +123-456-7890</li>
+                        <li>Website: <a href="https://yourwebsite.com" target="_blank" class="text-white">yourwebsite.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Me</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-white">LinkedIn</a></li>
+                        <li><a href="https://github.com/yourprofile" target="_blank" class="text-white">GitHub</a></li>
+                        <li><a href="https://twitter.com/yourprofile" target="_blank" class="text-white">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const codeEditor = CodeMirror.fromTextArea(document.getElementById("codeEditor"), {
+            mode: "htmlmixed",
+            lineNumbers: true,
+            extraKeys: {"Ctrl-Space": "autocomplete"},
+            theme: "dracula"
+        });
+
+        function runCode() {
+            const code = codeEditor.getValue();
+            const output = document.getElementById("output");
+            output.srcdoc = code;
+        }
+
+        $(document).ready(function() {
+            $('#loginBtn').click(function() {
+                alert('Login feature coming soon!');
+            });
+
+            $('#darkModeToggle').change(function() {
+                $('body').toggleClass('dark-mode');
+            });
+
+            $('#autoSuggestToggle').change(function() {
+                if ($(this).is(':checked')) {
+                    codeEditor.setOption("extraKeys", {"Ctrl-Space": "autocomplete"});
+                } else {
+                    codeEditor.setOption("extraKeys", null);
+                }
+            });
+
+            $('#fontSizeToggle').change(function() {
+                if ($(this).is(':checked')) {
+                    $('body').css('font-size', '1.2em');
+                } else {
+                    $('body').css('font-size', '1em');
+                }
+            });
+
+            $('#colorSchemeToggle').change(function() {
+                if ($(this).is(':checked')) {
+                    $('body').css('background-color', '#f4f4f9');
+                    $('body').css('color', '#333');
+                } else {
+                    $('body').css('background-color', '');
+                    $('body').css('color', '');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

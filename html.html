@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial - Comprehensive Guide</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Tutorial</h1>
+        <p>Welcome to the comprehensive HTML tutorial. Here you will learn the basics to advanced concepts of HTML.</p>
+        
+        <h2>Introduction to HTML</h2>
+        <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages. HTML describes the structure of a webpage using various elements.</p>
+        
+        <h2>HTML Elements</h2>
+        <p>HTML elements are the building blocks of HTML pages. An HTML element is defined by a start tag, some content, and an end tag.</p>
+        <pre>
+&lt;tagname&gt;Content goes here...&lt;/tagname&gt;
+        </pre>
+
+        <h3>Example of an HTML Element</h3>
+        <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+        </pre>
+
+        <h2>HTML Attributes</h2>
+        <p>HTML attributes provide additional information about HTML elements. They are always specified in the start tag.</p>
+        <pre>
+&lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;
+        </pre>
+        
+        <h3>Example of an HTML Attribute</h3>
+        <pre>
+&lt;a href="https://www.example.com"&gt;This is a link&lt;/a&gt;
+        </pre>
+
+        <h2>HTML Forms</h2>
+        <p>HTML forms are used to collect user input. Forms contain form elements like input fields, checkboxes, radio buttons, submit buttons, etc.</p>
+        <pre>
+&lt;form action="/submit-form" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+        </pre>
+
+        <h2>HTML Headings</h2>
+        <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags. <code>&lt;h1&gt;</code> defines the most important heading, while <code>&lt;h6&gt;</code> defines the least important heading.</p>
+        <pre>
+&lt;h1&gt;This is an H1 heading&lt;/h1&gt;
+&lt;h2&gt;This is an H2 heading&lt;/h2&gt;
+        </pre>
+
+        <h2>HTML Lists</h2>
+        <p>HTML supports ordered, unordered, and description lists.</p>
+        
+        <h3>Unordered List</h3>
+        <pre>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+        </pre>
+        
+        <h3>Ordered List</h3>
+        <pre>
+&lt;ol&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+        </pre>
+
+        <h3>Description List</h3>
+        <pre>
+&lt;dl&gt;
+    &lt;dt&gt;Definition term&lt;/dt&gt;
+    &lt;dd&gt;Definition description&lt;/dd&gt;
+&lt;/dl&gt;
+        </pre>
+
+        <h2>HTML Links</h2>
+        <p>Links are an essential aspect of web pages. You can create links using the <code>&lt;a&gt;</code> tag.</p>
+        <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+        </pre>
+
+        <h2>HTML Images</h2>
+        <p>You can embed images in your HTML documents using the <code>&lt;img&gt;</code> tag.</p>
+        <pre>
+&lt;img src="image.jpg" alt="Description of image"&gt;
+        </pre>
+
+        <h2>HTML Tables</h2>
+        <p>HTML tables are used to organize data in rows and columns. You can create tables using the <code>&lt;table&gt;</code> tag.</p>
+        <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+
+        <h2>HTML Semantic Elements</h2>
+        <p>HTML5 introduces semantic elements that provide meaning to the structure of your document, such as <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code>.</p>
+        <pre>
+&lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;This is an article.&lt;/p&gt;
+&lt;/article&gt;
+        </pre>
+
+        <h2>HTML5 Features</h2>
+        <p>HTML5 brought many new features and APIs that enhance web applications, including local storage, audio, video elements, and much more.</p>
+        
+        <h3>Embedding Video</h3>
+        <p>HTML5 allows you to embed video using the <code>&lt;video&gt;</code> tag.</p>
+        <pre>
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </pre>
+
+        <h3>Embedding Audio</h3>
+        <p>Similar to video, you can embed audio using the <code>&lt;audio&gt;</code> tag.</p>
+        <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+        </pre>
+
+        <h2>HTML Forms Advanced</h2>
+        <p>HTML forms can be enhanced using new input types in HTML5. These include email, date, range, and more.</p>
+        <pre>
+&lt;form&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+        </pre>
+
+        <h3>Validation Attributes</h3>
+        <p>HTML5 also includes validation attributes for forms such as <code>required</code>, <code>pattern</code>, etc.</p>
+        <pre>
+&lt;input type="text" required pattern="[A-Za-z]{3}" title="Three letter country code"&gt;
+        </pre>
+
+        <h2>HTML Character Entities</h2>
+        <p>Some characters have special meanings in HTML. You can use character entities to display these characters.</p>
+        <pre>
+&lt; &amp;lt; 
+&gt; &amp;gt;
+&amp; &amp;amp;
+&quot; &amp;quot;
+&apos; &amp;#39;
+        </pre>
+
+        <h2>HTML Media Queries</h2>
+        <p>Although media queries are usually used in CSS, they play a significant role in responsive design for HTML elements.</p>
+        <pre>
+&lt;style&gt;
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+&lt;/style&gt;
+        </pre>
+
+        <h2>Meta Tags</h2>
+        <p>Meta tags provide information about the HTML document. They can set the document's character set, author, keywords, and more.</p>
+        <pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="Free HTML Tutorial"&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+        </pre>
+
+        <h3>Charset Attribute</h3>
+        <p>Define the character encoding for an HTML document using the <code>&lt;meta&gt;</code> tag.</p>
+        <pre>
+&lt;meta charset="UTF-8"&gt;
+        </pre>
+
+        <h2>HTML Comments</h2>
+        <p>You can write comments in HTML that will not be displayed in the browser.</p>
+        <pre>
+&lt;!-- This is a comment --&gt;
+        </pre>
+
+        <h2>Conclusion</h2>
+        <p>This tutorial covers the basics to advanced topics of HTML. With this knowledge, you can start creating complex and interactive web pages. Continue to explore more advanced features and keep practicing!</p>
+    </div>
+</body>
+</html>
+
