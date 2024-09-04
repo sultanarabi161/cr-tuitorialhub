@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Custom Controls with Plyr.io Video Player</title>
+
+  <link rel='stylesheet' href='https://cdn.plyr.io/3.5.6/plyr.css'>
+
+</head>
+
+<body>
+
+<video id="player" controls crossorigin playsinline class="js-player" 
+
+       poster="https://th.bing.com/th/id/R.e3178dc9899e213464f79fc12802315f?rik=4sH1hAKHqq%2bQXg&pid=ImgRaw&r=0">
+
+  <!-- HLS ভিডিও ফাইল -->
+
+</video>
+
+<script src='https://cdn.plyr.io/3.5.6/plyr.js'></script>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const controls = [
+
+            'play-large', // The large play button in the center
+
+            'restart', // Restart playback
+
+            'rewind', // Rewind by the seek time (default 10 seconds)
+
+            'play', // Play/pause playback
+
+            'fast-forward', // Fast forward by the seek time (default 10 seconds)
+
+            'progress', // The progress bar and scrubber for playback and buffering
+
+            'current-time', // The current time of playback
+
+            'duration', // The full duration of the media
+
+            'mute', // Toggle mute
+
+            'volume', // Volume control
+
+            'captions', // Toggle captions
+
+            'settings', // Settings menu
+
+            'pip', // Picture-in-picture (currently Safari only)
+
+            'airplay', // Airplay (currently Safari only)
+
+           
+
+            'fullscreen' // Toggle fullscreen
+
+        ];
+
+        const player = new Plyr('#player', { controls });
+
+        if (Hls.isSupported()) {
+
+            const hls = new Hls();
+
+            hls.loadSource('https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/tracks-v3a1/mono.m3u8');
+
+            hls.attachMedia(document.getElementById('player'));
+
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+
+              player.play();
+
+            });
+
+        } else if (player.canPlayType('application/vnd.apple.mpegurl')) {
+
+            player.src = 'https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/tracks-v3a1/mono.m3u8';
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>
+
+
+<hr>
+
+<b><b><b><br><br><br>
+
+
+
+<b>Peace TV Bangla</b> is an Islamic television channel that broadcasts religious and educational content in the Bengali language. As part of the Peace TV network, the channel is dedicated to spreading the teachings of Islam, promoting peace, and fostering understanding among viewers. Peace TV Bangla offers a variety of programs, including Quranic recitations, lectures by renowned Islamic scholars, talk shows, and educational series aimed at deepening the understanding of Islamic principles. The channel also addresses social issues from an Islamic perspective and provides guidance on living a life in accordance with Islamic values. Peace TV Bangla is watched by millions of Bengali-speaking Muslims around the world and is known for its commitment to promoting positive values and peaceful coexistence.
+  
+  
+  <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUHf8UTjB9rtfErzcRMoAicNTF5j12UtQKxcvw6SHyzgaIpBtKlvW2yhac3LSTgSXHfVdVhDRl8Y6AT2-HNxDZME3F0MjBVje63H7ITZ2AW-BiWKvSzyXPReA8W9UG0KbAn8rXULxQUFI2BN9nuZlkAZFOtFsD_Ac6mnLuuqt9QGH_e2k2jaAHsB59Cjo/s1280/maxresdefault_live.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="320" data-original-height="720" data-original-width="1280" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUHf8UTjB9rtfErzcRMoAicNTF5j12UtQKxcvw6SHyzgaIpBtKlvW2yhac3LSTgSXHfVdVhDRl8Y6AT2-HNxDZME3F0MjBVje63H7ITZ2AW-BiWKvSzyXPReA8W9UG0KbAn8rXULxQUFI2BN9nuZlkAZFOtFsD_Ac6mnLuuqt9QGH_e2k2jaAHsB59Cjo/s320/maxresdefault_live.jpg"/></a></div>
