@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial - TutorialHub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Tutorial</h1>
+        <p>Welcome to the JavaScript tutorial. Here you will learn the basics of JavaScript and how to use it to add interactivity to web pages.</p>
+        
+        <h2>Introduction to JavaScript</h2>
+        <p>JavaScript is a programming language that allows you to implement complex features on web pages, such as dynamically updating content, controlling multimedia, and much more.</p>
+        
+        <h2>JavaScript Syntax</h2>
+        <p>JavaScript is a lightweight, interpreted language that is run in the browser. Here is a simple example:</p>
+        <pre>
+function sayHello() {
+    alert("Hello, World!");
+}
+sayHello();
+        </pre>
+        
+        <h3>JavaScript Variables</h3>
+        <p>Variables are used to store data values. In JavaScript, you can declare variables using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+        <pre>
+let name = "John";
+const age = 30;
+var isStudent = true;
+        </pre>
+
+        <h2>JavaScript Data Types</h2>
+        <p>JavaScript provides different data types to hold different types of values, such as strings, numbers, objects, and more.</p>
+        <pre>
+let text = "Hello";
+let number = 123;
+let object = { firstName: "John", lastName: "Doe" };
+        </pre>
+        
+        <h2>JavaScript Functions</h2>
+        <p>Functions are blocks of code designed to perform a particular task. They are executed when they are called.</p>
+        <pre>
+function add(a, b) {
+    return a + b;
+}
+let result = add(5, 10);
+console.log(result);
+        </pre>
+
+        <h2>DOM Manipulation</h2>
+        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</p>
+        <pre>
+document.getElementById("myElement").innerHTML = "New Content";
+        </pre>
+
+        <h2>JavaScript Events</h2>
+        <p>Events are actions that occur when users interact with the web page, such as clicking a button or pressing a key.</p>
+        <pre>
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button was clicked!");
+});
+        </pre>
+
+        <h2>Conclusion</h2>
+        <p>This is a basic introduction to JavaScript. With this knowledge, you can start adding interactivity to your web pages. As you learn more, you'll be able to create complex web applications.</p>
+    </div>
+</body>
+</html>
+

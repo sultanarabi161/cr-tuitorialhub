@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial - TutorialHub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Tutorial</h1>
+        <p>Welcome to the CSS tutorial. Here you will learn the basics of CSS and how to use it to style web pages.</p>
+        
+        <h2>Introduction to CSS</h2>
+        <p>CSS stands for Cascading Style Sheets. It is used to style and layout web pages, such as changing the font, color, size, and spacing of your content, or adding animations and other decorative features.</p>
+
+        <h2>CSS Syntax</h2>
+        <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page.</p>
+        <pre>
+selector {
+    property: value;
+}
+        </pre>
+        
+        <h3>Example of a CSS Rule</h3>
+        <pre>
+p {
+    color: red;
+    font-size: 16px;
+}
+        </pre>
+
+        <h2>CSS Selectors</h2>
+        <p>Selectors are used to "find" (or select) the HTML elements you want to style.</p>
+        
+        <h3>Example of CSS Selectors</h3>
+        <pre>
+/* Selects all &lt;p&gt; elements */
+p {
+    color: blue;
+}
+
+/* Selects the element with id="example" */
+#example {
+    background-color: yellow;
+}
+
+/* Selects all elements with class="example" */
+.example {
+    font-weight: bold;
+}
+        </pre>
+        
+        <h2>CSS Colors</h2>
+        <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+        <pre>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+}
+
+p {
+    color: #333;
+}
+        </pre>
+
+        <h2>CSS Box Model</h2>
+        <p>The CSS box model is a fundamental concept for designing layouts. It consists of margins, borders, padding, and the actual content.</p>
+        <pre>
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+        </pre>
+
+        <h2>CSS Flexbox</h2>
+        <p>Flexbox is a layout model that allows you to design a complex layout structure more efficiently and predictably than traditional models.</p>
+        <pre>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+        </pre>
+
+        <h2>CSS Grid</h2>
+        <p>The CSS Grid Layout provides a two-dimensional grid-based layout system, allowing you to manage the layout of complex web applications easily.</p>
+        <pre>
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+        </pre>
+
+        <h2>CSS Media Queries</h2>
+        <p>Media queries are a feature of CSS that allows content rendering to adapt to different conditions such as screen size and orientation.</p>
+        <pre>
+@media (max-width: 600px) {
+    body {
+        background-color: lightpink;
+    }
+}
+        </pre>
+
+        <h2>CSS Animations</h2>
+        <p>CSS animations allow you to animate transitions between different CSS styles smoothly.</p>
+        <pre>
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: example 4s infinite;
+}
+        </pre>
+
+        <h2>CSS Pseudo-classes</h2>
+        <p>Pseudo-classes are used to define the special state of an element.</p>
+        <pre>
+a:hover {
+    color: green;
+}
+        </pre>
+
+        <h2>CSS Pseudo-elements</h2>
+        <p>Pseudo-elements are used to style specific parts of an element.</p>
+        <pre>
+p::first-line {
+    font-weight: bold;
+}
+        </pre>
+
+        <h2>CSS Transitions</h2>
+        <p>CSS transitions allow you to change property values smoothly (over a given duration).</p>
+        <pre>
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: background-color 0.5s ease;
+}
+
+.box:hover {
+    background-color: green;
+}
+        </pre>
+
+        <h2>CSS Variables</h2>
+        <p>CSS variables (also known as custom properties) allow you to store values that can be reused throughout your CSS.</p>
+        <pre>
+:root {
+    --main-bg-color: coral;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+        </pre>
+
+        <h2>CSS Functions</h2>
+        <p>CSS functions allow for complex values and calculations to be used. Common functions include calc(), var(), and rgb().</p>
+        <pre>
+div {
+    width: calc(100% - 20px);
+    background-color: rgba(255, 0, 0, 0.5);
+}
+        </pre>
+
+        <h2>Advanced CSS Selectors</h2>
+        <p>Advanced selectors allow for greater specificity and control over which elements are targeted.</p>
+        <pre>
+/* Selects all <p> elements that are direct children of <div> */
+div > p {
+    color: purple;
+}
+
+/* Selects all <a> elements that are within a <nav> */
+nav a {
+    text-decoration: none;
+}
+        </pre>
+
+        <h2>Conclusion</h2>
+        <p>This is a basic introduction to CSS, including advanced topics. With this knowledge, you can start styling web pages. As you progress, you'll be able to create complex and beautiful designs.</p>
+    </div>
+</body>
+</html>
+
